@@ -9,4 +9,12 @@ describe User do
     it { is_expected.to validate_uniqueness_of(:email) }
     it { is_expected.to validate_presence_of(:password_digest) }
   end
+
+  describe "#invite" do
+    it "temporarily return true" do
+      user = build(:user)
+
+      expect(user.invite).to eq(true)
+    end
+  end
 end

@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: { case_sensitive: true }
   validates :password_digest, presence: true
+
+  def invite
+    true
+  end
 end
