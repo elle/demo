@@ -39,6 +39,7 @@ GEM
     addressable (2.4.0)
     arel (6.0.3)
     awesome_print (1.6.1)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -203,6 +204,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt
   capybara-webkit
   coffee-rails (~> 4.1.0)
   database_cleaner
