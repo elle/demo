@@ -1,0 +1,3 @@
+Welcome <%= @user.email %>
+
+<%= t(".body", confirmation_url: confirmation_url(token: @user.token)) %>
