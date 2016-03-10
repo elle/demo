@@ -11,10 +11,13 @@ describe User do
   end
 
   describe "#invite" do
-    it "temporarily return true" do
+    it "enqueues sending the invitation" do
+      allow(SendNewUserInvitationJob).to receive(:perform_later)
       user = build(:user)
 
-      expect(user.invite).to eq(true)
+      user.invite
+
+      expect(SendNewUserInvitationJob).to have_received(:perform_later)
     end
   end
 end

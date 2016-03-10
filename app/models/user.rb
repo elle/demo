@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: true
 
   def invite
-    true
+    SendNewUserInvitationJob.perform_later(id)
   end
 end
