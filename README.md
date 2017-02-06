@@ -10,7 +10,7 @@ echo "2.3.0" > .ruby-version
 bundle
 rails g simple_form:install
 touch .gitignore
-rails g rsepc:install
+rails g rspec:install
 bundle binstubs rspec-core
 rails g delayed_job:active_record
 rake db:migrate
